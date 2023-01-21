@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.borderButton {
+  font-family: "Lato";
+  font-weight: 700;
+  line-height: 19px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  padding: 8px 40px;
+  background-color: inherit;
+  align-items: center;
+}
+button{
+  border: none;
+}
+.backgroundButton {
+  font-family: "Lato";
+  font-weight: 700;
+  line-height: 19px;
+  color: #ffffff;
+  padding: 8px 40px;
+  background-color: #285A43;
+  align-items: center;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+h1 {
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 77px;
+  color: #ffffff;
+  align-items: center;
+}
+
+/* Font Family Lato */
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 400;
+  src: url("../font/Lato/Lato-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-weight: 500;
+  src: url("../font/Lato/Lato-Medium.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-weight: 600;
+  src: url("../font/Lato/Lato-Semibold.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-weight: 700;
+  src: url("../font/Lato/Lato-Bold.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-weight: 900;
+  src: url("../font/Lato/Lato-Black.ttf");
+}
+/* Font Family Raleway */
+
+@font-face {
+  font-family: "Lato";
+  font-weight: 400;
+  src: url("../font/Raleway/static/Raleway-Regular.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-weight: 500;
+  src: url("../font/Raleway/static/Raleway-Medium.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-weight: 600;
+  src: url("../font/Raleway/static/Raleway-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-weight: 700;
+  src: url("../font/Raleway/static/Raleway-Bold.ttf");
+}
+@font-face {
+  font-family: "Lato";
+  font-weight: 900;
+  src: url("../font/Raleway/static/Raleway-Black.ttf");
+}
+
+/* Font Family Poppins */
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 500;
+  src: url("../font/Poppins/Poppins-Medium.ttf");
+}

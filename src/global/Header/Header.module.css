@@ -1,0 +1,28 @@
+.headerBackground {
+  background-color: #99AAA8;
+  padding-top: 20px;
+}
+ul li {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  margin-right: 50px;
+}
+ul {
+  display: flex;
+}
+.rightNavSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+ul li:hover {
+  border-bottom: 1px solid #ffffff;
+}

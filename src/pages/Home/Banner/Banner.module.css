@@ -1,0 +1,27 @@
+.bannerWrapper img {
+  width: 100%;
+  /* height: 841px; */
+}
+.mainBannerSection{
+  position: relative;
+}
+.sliderWrapper{
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  z-index: 99999;
+  text-align: center;
+}
+.buttonGroup{
+  display: flex;
+  justify-content: center;
+  margin-top: 37px;
+  gap: 10px;
+}
+.playIcon{
+  margin-right: 10px;
+  font-size: 18px;
+  align-items: center;
+}
+
+
