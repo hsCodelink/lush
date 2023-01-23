@@ -1,6 +1,8 @@
 import React from "react";
 import { Images } from "../../pages/shared";
 import style from "./Header.module.css";
+import { GiShoppingCart } from "react-icons/gi";
+import { MdFavoriteBorder } from "react-icons/md";
 
 const Header = () => {
   return (
@@ -25,6 +27,12 @@ const Header = () => {
                   </li>
                   <li>
                     <a href="#">Contact</a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <GiShoppingCart style={{ fontSize: "20px" }} />
+                      {0}
+                    </a>
                   </li>
                 </ul>
               </div>

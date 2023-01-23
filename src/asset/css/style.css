@@ -9,6 +9,7 @@
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 15px;
 }
 
 .borderButton {
@@ -22,7 +23,7 @@
   background-color: inherit;
   align-items: center;
 }
-button{
+button {
   border: none;
 }
 .backgroundButton {
@@ -31,7 +32,7 @@ button{
   line-height: 19px;
   color: #ffffff;
   padding: 8px 40px;
-  background-color: #285A43;
+  background-color: #285a43;
   align-items: center;
 }
 ul {
@@ -48,6 +49,25 @@ h1 {
   line-height: 77px;
   color: #ffffff;
   align-items: center;
+}
+h2 {
+  font-family: "Lato";
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 140%;
+  letter-spacing: 0.04em;
+  text-transform: capitalize;
+  color: #285a43;
+  text-align: center;
+}
+
+h6 {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 900;
+  line-height: 140%;
+  text-transform: capitalize;
+  color: #337A5B;
 }
 
 /* Font Family Lato */
@@ -80,27 +100,27 @@ h1 {
 /* Font Family Raleway */
 
 @font-face {
-  font-family: "Lato";
+  font-family: "Raleway";
   font-weight: 400;
   src: url("../font/Raleway/static/Raleway-Regular.ttf");
 }
 @font-face {
-  font-family: "Lato";
+  font-family: "Raleway";
   font-weight: 500;
   src: url("../font/Raleway/static/Raleway-Medium.ttf");
 }
 @font-face {
-  font-family: "Lato";
+  font-family: "Raleway";
   font-weight: 600;
   src: url("../font/Raleway/static/Raleway-SemiBold.ttf");
 }
 @font-face {
-  font-family: "Lato";
+  font-family: "Raleway";
   font-weight: 700;
   src: url("../font/Raleway/static/Raleway-Bold.ttf");
 }
 @font-face {
-  font-family: "Lato";
+  font-family: "Raleway";
   font-weight: 900;
   src: url("../font/Raleway/static/Raleway-Black.ttf");
 }

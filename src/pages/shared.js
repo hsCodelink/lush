@@ -30,9 +30,56 @@ export const sliderContent = [
     discription:
       "Nature's beauty is just a click away with our online flower and plant shop. We offer a wide variety of flowers that will bring a touch of nature to your home!",
   },
-  {
-    title: "Nature's Beauty Delivered to You 3",
-    discription:
-      "Nature's beauty is just a click away with our online flower and plant shop. We offer a wide variety of flowers that will bring a touch of nature to your home!",
-  },
 ];
+
+
+export const productDetails=[
+  {
+    image:Images.productImage_1,
+    title:"Cactus Plant",
+    oldPrice:"($10)",
+    discountPrice:"$8",
+  },
+  {
+    image:Images.productImage_2,
+    title:"Cactus Plant",
+    oldpPrice:"($10)",
+    discountPrice:"$8",
+  },
+  {
+    image:Images.productImage_3,
+    title:"Cactus Plant",
+    oldPrice:"($10)",
+    discountPrice:"$8",
+  },
+  {
+    image:Images.productImage_4,
+    title:"Cactus Plant",
+    oldPrice:"($10)",
+    discountPrice:"$8",
+  },
+  {
+    image:Images.productImage_5,
+    title:"Cactus Plant",
+    oldPrice:"($10)",
+    discountPrice:"$8",
+  },
+  {
+    image:Images.productImage_6,
+    title:"Cactus Plant",
+    oldPrice:"($10)",
+    discountPrice:"$8",
+  },
+  {
+    image:Images.productImage_7,
+    title:"Cactus Plant",
+    oldPrice:"($10)",
+    discountPrice:"$8",
+  },
+  {
+    image:Images.productImage_8,
+    title:"Cactus Plant",
+    oldPrice:"($10)",
+    discountPrice:"$8",
+  },
+]
