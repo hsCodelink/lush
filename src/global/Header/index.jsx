@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Images } from "../../pages/shared";
 import style from "./Header.module.css";
 import { GiShoppingCart } from "react-icons/gi";
 import { MdFavoriteBorder } from "react-icons/md";
+import { cartContext } from "../../App";
 
-const Header = () => {
+const Header = ({ totalItems }) => {
+  const [state, dispatch] = useContext(cartContext);
   return (
     <header className={style.headerBackground}>
       <nav>
@@ -31,8 +33,11 @@ const Header = () => {
                   <li>
                     <a href="#">
                       <GiShoppingCart style={{ fontSize: "20px" }} />
-                      {0}
+                      {totalItems}
                     </a>
+                  </li>
+                  <li>
+                    <a href="#">{state.discountPrice}</a>
                   </li>
                 </ul>
               </div>

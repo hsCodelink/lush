@@ -1,18 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { cartContext } from "../../App";
 import { productDetails } from "../../pages/shared";
 import ProductCard from "./Card";
 import style from "./Products.module.css";
 
 const Products = () => {
-  const [cart, setCart] = useState("");
-
-  const carthandler = (id) => {
-    console.log(id);
-  };
-
-  useEffect(() => {
-    console.log("cart :", cart);
-  }, [cart]);
+  const [state, dispatch] = useContext(cartContext);
 
   return (
     <div className="container">
@@ -26,9 +19,22 @@ const Products = () => {
               <ProductCard
                 content={cardItem}
                 key={index}
-                cart={() => {
-                  carthandler(index);
-                }}
+                itemClick={() =>
+                  dispatch({
+                    type: "Buy_Now_Increment",
+                    payload: {
+                      qunt: 1,
+                      id: cardItem.id,
+                      discountPrice: cardItem.discountPrice,
+                    },
+                  })
+                }
+                itemUnClick={() =>
+                  dispatch({
+                    type: "Buy_Now_decrement",
+                    payload: { qunt: 1, id: cardItem.id },
+                  })
+                }
               />
             );
           })}

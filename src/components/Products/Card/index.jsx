@@ -1,20 +1,35 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import style from "./Card.module.css";
-import { MdOutlineFavoriteBorder, MdOutlineFavorite } from "react-icons/md";
+import {
+  MdOutlineFavoriteBorder as FavBorderIcon,
+  MdOutlineFavorite as FavIcon,
+} from "react-icons/md";
 
 const ProductCard = ({
-  content: { image, title, oldPrice, discountPrice },
-  cart,
+  content: { image: img, title, oldPrice, discountPrice },
+  itemClick,
+  itemUnClick,
 }) => {
   const [favorite, setFavorite] = useState(false);
-
   return (
     <div className={style.mainCard}>
       <div className={style.imageWrapper}>
-        <img src={image} />
+        <img src={img} />
         <div className={style.favIconWrapper}>
           {favorite ? (
-            <MdOutlineFavoriteBorder
+            <FavIcon
+              color="#337A5B"
+              onClick={() => {
+                setFavorite((prev) => !prev);
+              }}
+              style={{
+                fontSize: "25px",
+                backgroundColor: "#FFFFFF",
+                borderRadius: "20px",
+              }}
+            />
+          ) : (
+            <FavBorderIcon
               onClick={() => {
                 setFavorite((prev) => !prev);
               }}
@@ -24,18 +39,6 @@ const ProductCard = ({
                 borderRadius: "20px",
               }}
               className={style.favIcon}
-            />
-          ) : (
-            <MdOutlineFavorite
-            onClick={() => {
-              setFavorite((prev) => !prev);
-            }}
-              color="#337A5B"
-              style={{
-                fontSize: "25px",
-                backgroundColor: "#FFFFFF",
-                borderRadius: "20px",
-              }}
             />
           )}
         </div>
@@ -58,7 +61,7 @@ const ProductCard = ({
           <button
             className={style.buyButton}
             onClick={() => {
-              cart();
+              itemClick();
             }}
           >
             Buy Now
