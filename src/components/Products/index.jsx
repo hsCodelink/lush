@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { cartContext } from "../../App";
+import { cart, cartContext } from "../../App";
 import { productDetails } from "../../pages/shared";
 import ProductCard from "./Card";
 import style from "./Products.module.css";
@@ -19,11 +19,11 @@ const Products = () => {
               <ProductCard
                 content={cardItem}
                 key={index}
+                id={cardItem.id}
                 itemClick={() =>
                   dispatch({
                     type: "Buy_Now_Increment",
                     payload: {
-                      qunt: 1,
                       id: cardItem.id,
                       discountPrice: cardItem.discountPrice,
                     },
@@ -32,7 +32,10 @@ const Products = () => {
                 itemUnClick={() =>
                   dispatch({
                     type: "Buy_Now_decrement",
-                    payload: { qunt: 1, id: cardItem.id },
+                    payload: {
+                      id: cardItem.id,
+                      discountPrice: cardItem.discountPrice,
+                    },
                   })
                 }
               />

@@ -2,11 +2,16 @@ import React, { useContext } from "react";
 import { Images } from "../../pages/shared";
 import style from "./Header.module.css";
 import { GiShoppingCart } from "react-icons/gi";
-import { MdFavoriteBorder } from "react-icons/md";
 import { cartContext } from "../../App";
+// import { MdFavoriteBorder } from "react-icons/md";
+// import {  cart } from "../../App";
 
-const Header = ({ totalItems }) => {
+
+const Header = () => {
   const [state, dispatch] = useContext(cartContext);
+  let total = state.reduce(function (prev, current) {
+    return prev + +current.discountPrice;
+  }, 0);
   return (
     <header className={style.headerBackground}>
       <nav>
@@ -33,11 +38,11 @@ const Header = ({ totalItems }) => {
                   <li>
                     <a href="#">
                       <GiShoppingCart style={{ fontSize: "20px" }} />
-                      {totalItems}
+                      {state.length > 0 ? state.length : 0}
                     </a>
                   </li>
                   <li>
-                    <a href="#">{state.discountPrice}</a>
+                    <a href="#">{total}$</a>
                   </li>
                 </ul>
               </div>

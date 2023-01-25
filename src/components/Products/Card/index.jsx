@@ -4,13 +4,23 @@ import {
   MdOutlineFavoriteBorder as FavBorderIcon,
   MdOutlineFavorite as FavIcon,
 } from "react-icons/md";
+import {  cartContext } from "../../../App";
 
 const ProductCard = ({
   content: { image: img, title, oldPrice, discountPrice },
   itemClick,
   itemUnClick,
+  id,
 }) => {
   const [favorite, setFavorite] = useState(false);
+  const [state] = useContext(cartContext);
+
+  const idCheck = state.some((item) => item.id == id);
+
+  useEffect(() => {
+    console.log("id check: ", idCheck);
+  }, [idCheck]);
+
   return (
     <div className={style.mainCard}>
       <div className={style.imageWrapper}>
@@ -59,10 +69,16 @@ const ProductCard = ({
         </div>
         <div className={style.rightContent}>
           <button
-            className={style.buyButton}
-            onClick={() => {
-              itemClick();
-            }}
+            className={idCheck ? style.buyRemoveButton : style.buyButton}
+            onClick={
+              idCheck
+                ? () => {
+                    itemUnClick();
+                  }
+                : () => {
+                    itemClick();
+                  }
+            }
           >
             Buy Now
           </button>

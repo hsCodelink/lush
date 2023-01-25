@@ -1,34 +1,31 @@
-import { createContext, useReducer, useState } from "react";
+import { createContext, useEffect, useReducer, useState } from "react";
 import Header from "./global/Header";
 import Home from "./pages/Home";
 import Footer from "./global/Footer";
 
+export const cart = [];
 const cartContext = createContext();
 function App() {
-  const initialState = {
-    totalItems: 0,
-    cart: [],
-  };
   const reducer = (state, action) => {
-    const { id ,discountPrice} = action.payload;
-    if (action.type === "Buy_Now_Increment" && id === action.payload.id) {
-      return state + action.payload.qunt;
-      
-    } else if (
-      action.type === "Buy_Now_decrement" &&
-      state > 0 &&
-      id === action.payload.id
-    ) {
-      return state - action.payload.qunt;
+    const { id } = action.payload;
+    if (action.type === "Buy_Now_Increment") {
+      return [...state, action.payload];
+    } else if (action.type === "Buy_Now_decrement") {
+      return state.filter((current) => current.id !== id);
     }
     return state;
   };
 
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [state, dispatch] = useReducer(reducer, cart);
+
+  useEffect(() => {
+    console.log("state change: ", state);
+  }, [state]);
+
   return (
     <>
       <cartContext.Provider value={[state, dispatch]}>
-        <Header totalItems={initialState.totalItems} />
+        <Header />
         <main>
           <Home />
         </main>

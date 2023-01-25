@@ -26,11 +26,20 @@
   cursor: pointer;
   transition: 0.8s;
 }
-.buyButton:hover {
-  transition: 0.2s;
+.rightContent .buyRemoveButton {
+  font-family: "Lato";
+  font-weight: 900;
+  font-size: 12px;
+  line-height: 140%;
+  text-transform: capitalize;
+  border: 1px solid #337a5b;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: 0.8s;
   background-color: #337a5b;
   color: #ffffff;
 }
+
 .priceSection {
   display: flex;
 }
