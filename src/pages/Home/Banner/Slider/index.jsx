@@ -13,8 +13,6 @@ const Slider = () => {
     loop: true,
     startPosition: currentIndex,
     dots: false,
-    // autoplay: true,
-    // autoplayTimeout: 1000,
   };
 
   return (
@@ -26,13 +24,13 @@ const Slider = () => {
           id={style.owlCarousel}
         >
           {sliderContent.map((item, index) => {
-            return <Info content={item} key={index} />;
+            return <Info {...item} key={index} />;
           })}
         </OwlCarousel>
       </div>
       <div className={style.buttonGroup}>
         <button
-        className={ currentIndex === 0 && style.active}
+          className={currentIndex === 0 && style.active}
           onClick={() => {
             setCurrentIndex(0);
           }}
@@ -40,7 +38,7 @@ const Slider = () => {
           01
         </button>
         <button
-        className={ currentIndex === 1 && style.active}
+          className={currentIndex === 1 && style.active}
           onClick={() => {
             setCurrentIndex(1);
           }}
@@ -48,7 +46,7 @@ const Slider = () => {
           02
         </button>
         <button
-        className={ currentIndex === 2 && style.active}
+          className={currentIndex === 2 && style.active}
           onClick={() => {
             setCurrentIndex(2);
           }}

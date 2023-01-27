@@ -17,11 +17,6 @@ function App() {
   };
 
   const [state, dispatch] = useReducer(reducer, cart);
-
-  useEffect(() => {
-    console.log("state change: ", state);
-  }, [state]);
-
   return (
     <>
       <cartContext.Provider value={[state, dispatch]}>

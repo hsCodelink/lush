@@ -12,6 +12,8 @@ export const Images = {
   blogImage_1: require("../asset/images/BlogImage 1.png"),
   blogImage_2: require("../asset/images/BlogImage 2.png"),
   blogImage_3: require("../asset/images/BlogImage 3.png"),
+  footer_bg_1: require("../asset/images/Footer bg 1.png"),
+  footer_bg_2: require("../asset/images/Footer bg 2.png"),
 };
 
 export const sliderContent = [
@@ -44,7 +46,7 @@ export const productDetails = [
     id: 2,
     image: Images.productImage_2,
     title: "Cactus Plant",
-    oldpPrice: "($10)",
+    oldPrice: "($10)",
     discountPrice: 18,
   },
   {
@@ -88,5 +90,29 @@ export const productDetails = [
     title: "Cactus Plant",
     oldPrice: "($10)",
     discountPrice: 20,
+  },
+];
+
+export const blogDetails = [
+  {
+    image: Images.blogImage_1,
+    title: "More productive with an atmosphere of greenery",
+    discription:
+      "An atmosphere of greenery can increase productivity in the workplace. Studies show that plants improve air quality and decrease stress...",
+    date: "January 20, 2023",
+  },
+  {
+    image: Images.blogImage_2,
+    title: "The benefits of plants in your room",
+    discription:
+      "Plants in your room can bring numerous benefits, such as improved air quality, reduced stress, and increased feelings of well-being....",
+    date: "January 10, 2023",
+  },
+  {
+    image: Images.blogImage_3,
+    title: "Hobbyist plants in the house",
+    discription:
+      "Having hobbyist plants in the house is a great way to bring nature indoors. Not only do they purify the air, but they....",
+    date: "January 15, 2023",
   },
 ];

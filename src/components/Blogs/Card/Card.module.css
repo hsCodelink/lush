@@ -1,0 +1,52 @@
+.title h6 {
+  margin-top: 16px;
+}
+.title {
+  height: 50px;
+}
+.discription p {
+  font-family: "Raleway";
+  font-weight: 500;
+  line-height: 150%;
+  color: #121212;
+  opacity: 0.8;
+}
+.discription {
+  height: 100px;
+}
+.cardLastSection {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  align-items: center;
+}
+.readMoreLink a {
+  font-family: "Lato";
+  font-weight: 900;
+  line-height: 140%;
+  color: #285a43 !important;
+}
+.imageContent {
+  padding-right: 50px;
+}
+.dateSection {
+  display: flex;
+  gap: 5px;
+}
+.blogDate span {
+  font-family: "Raleway";
+  font-weight: 500;
+  line-height: 150%;
+  color: rgba(18, 18, 18, 0.8);
+  opacity: 0.8;
+}
+.dateIcon {
+  font-size: 20px;
+}
+.readMoreLink {
+  display: flex;
+  align-items: center;
+}
+.readMoreLink .rightArrow {
+  font-size: 25px;
+}

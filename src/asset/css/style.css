@@ -41,6 +41,7 @@ ul {
 a {
   text-decoration: none;
   color: #ffffff;
+  cursor: pointer;
 }
 h1 {
   font-family: "Lato";

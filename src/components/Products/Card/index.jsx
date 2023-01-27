@@ -4,10 +4,13 @@ import {
   MdOutlineFavoriteBorder as FavBorderIcon,
   MdOutlineFavorite as FavIcon,
 } from "react-icons/md";
-import {  cartContext } from "../../../App";
+import { cartContext } from "../../../App";
 
 const ProductCard = ({
-  content: { image: img, title, oldPrice, discountPrice },
+  image: img,
+  title,
+  oldPrice,
+  discountPrice,
   itemClick,
   itemUnClick,
   id,
@@ -16,10 +19,6 @@ const ProductCard = ({
   const [state] = useContext(cartContext);
 
   const idCheck = state.some((item) => item.id == id);
-
-  useEffect(() => {
-    console.log("id check: ", idCheck);
-  }, [idCheck]);
 
   return (
     <div className={style.mainCard}>
@@ -55,9 +54,7 @@ const ProductCard = ({
       </div>
       <div className={style.cardContent}>
         <div className={style.leftContent}>
-          <div className={style.imageTitle}>
-            <h6>{title}</h6>
-          </div>
+          <h6>{title}</h6>
           <div className={style.priceSection}>
             <div className={style.oldPrice}>
               <span>{oldPrice}</span>

@@ -2,15 +2,16 @@
   background-color: #99AAA8;
   padding-top: 20px;
 }
-ul li {
+.navigation ul li {
   font-family: "Lato";
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
   margin-right: 50px;
+  color: #FFFFFF;
 }
-ul {
+.navigation ul {
   display: flex;
 }
 .rightNavSection {
@@ -23,6 +24,6 @@ ul {
   justify-content: space-between;
   align-items: center;
 }
-ul li:hover {
+.navigation ul li:hover {
   border-bottom: 1px solid #ffffff;
 }

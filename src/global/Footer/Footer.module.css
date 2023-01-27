@@ -1,0 +1,70 @@
+.footerBg {
+  margin-top: 120px;
+  background: #285a43;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+}
+.mainFooterSection {
+  padding: 80px 30px;
+}
+.heading h4 {
+  font-family: "Lato";
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 140%;
+  color: #ffffff;
+  text-align: center;
+}
+.socialIconWrapper {
+  display: flex;
+  margin-top: 35px;
+  text-align: center;
+  justify-content: space-evenly;
+  padding: 0 300px;
+}
+.socialIcon .instagram,
+.socialIcon .facebook,
+.socialIcon .twitter {
+  font-size: 50px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  padding: 10px;
+}
+.copyRightSection {
+  background: #121212;
+}
+.copyRightContent p {
+  color: #ffffff;
+  text-align: center;
+  font-family: "Raleway";
+  font-weight: 700;
+  line-height: 150%;
+  opacity: 0.8;
+}
+.menubar li a {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+  color: #ffffff !important;
+  opacity: 0.8;
+}
+.menubar ul {
+  margin-top: 35px;
+  display: flex;
+  text-align: center;
+  justify-content: space-between;
+  padding: 0 310px;
+}
+.imgWrapperLeft {
+  position: absolute;
+  top: 23%;
+  left: 0;
+}
+.imgWrapperRight {
+  position: absolute;
+  top: 41%;
+  right: 0;
+}

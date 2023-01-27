@@ -3,15 +3,14 @@ import { Images } from "../../pages/shared";
 import style from "./Header.module.css";
 import { GiShoppingCart } from "react-icons/gi";
 import { cartContext } from "../../App";
-// import { MdFavoriteBorder } from "react-icons/md";
-// import {  cart } from "../../App";
-
 
 const Header = () => {
-  const [state, dispatch] = useContext(cartContext);
+  const [state] = useContext(cartContext);
+
   let total = state.reduce(function (prev, current) {
     return prev + +current.discountPrice;
   }, 0);
+  
   return (
     <header className={style.headerBackground}>
       <nav>
@@ -47,7 +46,7 @@ const Header = () => {
                 </ul>
               </div>
               <div className={style.button}>
-                <button className="borderButton">Call Us</button>
+                <a href="#"><button className="borderButton">Call Us</button></a>
               </div>
             </div>
           </div>
